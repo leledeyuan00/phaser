@@ -1,0 +1,259 @@
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+
+.footer .icon-link:hover {
+  color: #2563EB;
+}
+
+.link-block a {
+  margin-top: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+  max-height: 50vh;
+}
+
+.publication-banner video {
+  max-height: 50vh;
+}
+
+.publication-header .hero-body {
+  padding-bottom: 2rem;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.publication-authors .author-block {
+  display: inline-block;
+}
+
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.publication-body img {
+
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 10px;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.interpolation-panel .hierarchical-slider {
+  padding: 0 10px;
+}
+
+.interpolation-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interpolation-image-wrapper img {
+  border-radius: 8px;
+}
+
+.interpolation-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ---- BibTeX Copy Button ---- */
+.bibtex-section {
+  position: relative;
+}
+
+.bibtex-section .copy-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #666;
+  padding: 0.3em 0.7em;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.bibtex-section .copy-btn:hover {
+  background: rgba(0,0,0,0.1);
+  color: #333;
+}
+
+/* ---- Placeholder Figures ---- */
+.figure-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  background:
+    linear-gradient(135deg, #f0f4f8 25%, transparent 25%),
+    linear-gradient(225deg, #f0f4f8 25%, transparent 25%),
+    linear-gradient(315deg, #f0f4f8 25%, transparent 25%),
+    linear-gradient(45deg, #f0f4f8 25%, transparent 25%);
+  background-size: 24px 24px;
+  background-color: #f8fafb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
+  border: 1px dashed #ddd;
+}
+
+.figure-placeholder.small {
+  aspect-ratio: 4 / 3;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.result-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.result-card .fig-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(160deg, #f5f7fa, #eef1f5);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  border: 1px dashed #ddd;
+}
+
+.result-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ---- Video Placeholder ---- */
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-placeholder-inner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.video-placeholder-inner i {
+  font-size: 2.5rem;
+  opacity: 0.35;
+}
+
+/* ---- Highlight Box (Method) ---- */
+.highlight-box {
+  background: #fafbfc;
+  border: 1px solid #eee;
+  border-left: 3px solid hsl(204, 86%, 53%);
+  border-radius: 0 10px 10px 0;
+  padding: 1.5rem 1.8rem;
+  margin-top: 1rem;
+}
+
+.highlight-box p,
+.highlight-box li {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.75;
+}
+
+.highlight-box ul {
+  margin-top: 0.5rem;
+  margin-left: 1.2rem;
+}
+
+.highlight-box li {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}

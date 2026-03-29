@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PHASER: Phase-Aware Self-Recovering Imitation Learning for Force-Guided Deformable Object Manipulation.">
+  <meta name="keywords" content="PHASER, Imitation Learning, Deformable Object Manipulation, Failure Recovery, Force-Aware">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHASER: Phase-Aware Self-Recovering Imitation Learning for Force-Guided Deformable Object Manipulation</title>
+
+  <!-- NOTE: Remove or replace with your own Google Analytics tag -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <!-- Bulma CSS Framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+  <!-- Font Awesome & Academicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<!-- ============================================================ -->
+<!--                        NAVBAR                                 -->
+<!-- ============================================================ -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- TODO: Replace with your homepage URL -->
+      <a class="navbar-item" href="https://your-homepage.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <!-- TODO: Add links to your other research projects -->
+          <a class="navbar-item" href="https://phaser-project.github.io">
+            PHASER
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============================================================ -->
+<!--                     TITLE / AUTHORS                           -->
+<!-- ============================================================ -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            PHASER: Phase-Aware Self-Recovering Imitation Learning
+            for Force-Guided Deformable Object Manipulation
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <!-- TODO: Replace with actual author names and URLs -->
+            <span class="author-block">
+              <a href="#">Author One</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="#">Author Two</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="#">Author Three</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <!-- TODO: Replace with actual affiliations -->
+            <span class="author-block"><sup>1</sup>University A,</span>
+            <span class="author-block"><sup>2</sup>University B</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block" style="color: #888;">* Equal contribution</span>
+          </div>
+
+          <!-- ---- Resource Buttons ---- -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    TEASER VIDEO / IMAGE                       -->
+<!-- ============================================================ -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!--
+        TODO: Replace with your teaser video or image.
+        For video:
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/teaser.mp4" type="video/mp4">
+          </video>
+        For image:
+          <img src="./static/images/teaser.png" alt="PHASER teaser figure" />
+      -->
+      <div class="figure-placeholder">
+        Replace with your teaser figure or video → ./static/images/teaser.png
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <span class="dnerf">PHASER</span> enables robust deformable object manipulation
+        with automatic failure recovery through phase-aware hierarchical imitation learning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--           VIDEO CAROUSEL (Demo Results)                       -->
+<!-- ============================================================ -->
+<!--
+  TODO: Replace placeholder videos with your actual demo videos.
+  Put your .mp4 files in ./static/videos/
+-->
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ============================================================ -->
+<!--                   ABSTRACT + VIDEO                            -->
+<!-- ============================================================ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your actual abstract -->
+          <p>
+            Imitation learning provides a promising paradigm for acquiring complex manipulation
+            skills from expert demonstrations. However, deploying learned policies for deformable
+            object manipulation remains challenging due to the objects' infinite-dimensional state
+            spaces and the difficulty of recovering from execution errors.
+          </p>
+          <p>
+            We present <span class="dnerf">PHASER</span>
+            (<em>Phase-Aware Self-Recovering Imitation Learning</em>), a hierarchical framework
+            that addresses these challenges through three key innovations:
+            (1)&nbsp;a phase-based task decomposition that explicitly structures the manipulation
+            process into semantically meaningful stages,
+            (2)&nbsp;a force-aware policy conditioned on tactile feedback for robust interaction
+            with deformable objects, and
+            (3)&nbsp;a closed-loop recovery mechanism that detects failures via phase prediction
+            and autonomously re-routes execution to the appropriate recovery behavior.
+          </p>
+          <p>
+            Extensive experiments on [benchmark tasks] demonstrate that
+            <span class="dnerf">PHASER</span> achieves [X]% higher success rates than
+            prior methods while recovering from [Y]% of mid-task failures.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    <!-- Paper Video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <!--
+            TODO: Replace with your YouTube video embed URL.
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&amp;showinfo=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          -->
+          <div class="video-placeholder-inner">
+            <i class="fas fa-play"></i>
+            Embed your video → YouTube / Bilibili
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video -->
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                       METHOD                                  -->
+<!-- ============================================================ -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method Overview -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: Replace with your method description -->
+            <span class="dnerf">PHASER</span> decomposes the manipulation task into
+            a sequence of explicit <em>phases</em>, each associated with a
+            force-aware sub-policy. A lightweight phase predictor continuously monitors
+            the task progress. When the predicted phase deviates from the expected
+            execution flow, the system triggers a recovery policy — closing the loop
+            between perception, prediction, and action.
+          </p>
+        </div>
+
+        <!-- Method Figure -->
+        <!--
+          TODO: Replace with your method/pipeline figure:
+          <img src="./static/images/method.png"
+               alt="PHASER method overview"
+               class="interpolation-image" />
+        -->
+        <div class="figure-placeholder">
+          Replace with your method figure → ./static/images/method.png
+        </div>
+        <p class="has-text-centered is-size-7" style="margin-top: 0.5rem; color: #888;">
+          <b>Figure 2.</b> Architecture of <span class="dnerf">PHASER</span>.
+          The phase predictor monitors task progress and feeds phase labels to the
+          hierarchical policy. Anomalies trigger the recovery module.
+        </p>
+        <br/>
+
+        <!-- Key Contributions Box -->
+        <div class="highlight-box">
+          <p><strong>Key Contributions:</strong></p>
+          <ul>
+            <!-- TODO: Replace with your actual contributions -->
+            <li><strong>Phase Predictor:</strong> A lightweight network that maps observations
+              to discrete phase labels, providing interpretable task progress monitoring.</li>
+            <li><strong>Force-Aware Policy:</strong> Each phase-specific policy is conditioned on
+              force/torque readings, enabling compliant manipulation of deformable objects.</li>
+            <li><strong>Recovery Mechanism:</strong> Phase transition anomalies automatically
+              trigger recovery sub-policies that restore valid manipulation states.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Method Overview -->
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                       RESULTS                                 -->
+<!-- ============================================================ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: Briefly describe your experimental setup -->
+            We evaluate <span class="dnerf">PHASER</span> on a diverse set of deformable
+            object manipulation tasks, comparing against state-of-the-art imitation learning
+            baselines. We assess both nominal task success and recovery ability under
+            injected perturbations.
+          </p>
+        </div>
+
+        <!-- Results Grid -->
+        <div class="result-grid">
+          <div class="result-card">
+            <!--
+              TODO: Replace with your result figure:
+              <img src="./static/images/result1.png" alt="Result 1" style="width:100%; border-radius:6px; margin-bottom:0.5rem;" />
+            -->
+            <div class="fig-placeholder">Result 1 → ./static/images/result1.png</div>
+            <p><b>(a)</b> Success rates across deformable manipulation tasks.</p>
+          </div>
+          <div class="result-card">
+            <div class="fig-placeholder">Result 2 → ./static/images/result2.png</div>
+            <p><b>(b)</b> Recovery success under injected perturbations.</p>
+          </div>
+          <div class="result-card">
+            <div class="fig-placeholder">Result 3 → ./static/images/result3.png</div>
+            <p><b>(c)</b> Ablation: force-awareness and phase predictor.</p>
+          </div>
+          <div class="result-card">
+            <div class="fig-placeholder">Result 4 → ./static/images/result4.png</div>
+            <p><b>(d)</b> Phase prediction accuracy vs. task success.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                       BIBTEX                                  -->
+<!-- ============================================================ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content bibtex-section">
+    <h2 class="title">BibTeX</h2>
+    <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+    <!-- TODO: Replace with your actual BibTeX entry -->
+    <pre><code>@inproceedings{authorname2026phaser,
+  author    = {One, Author and Two, Author and Three, Author},
+  title     = {PHASER: Phase-Aware Self-Recovering Imitation Learning
+               for Force-Guided Deformable Object Manipulation},
+  booktitle = {Proceedings of the Conference 2026},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                       FOOTER                                  -->
+<!-- ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- TODO: Replace with your paper PDF and GitHub links -->
+      <a class="icon-link" href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
