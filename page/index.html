@@ -8,14 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PHASER: Phase-Aware Self-Recovering Imitation Learning for Force-Guided Deformable Object Manipulation</title>
 
-  <!-- NOTE: Remove or replace with your own Google Analytics tag -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3K2VQ28LX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script> -->
+
+    gtag('config', 'G-Q3K2VQ28LX');
+  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -53,8 +54,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <!-- TODO: Replace with your homepage URL -->
-      <a class="navbar-item" href="https://your-homepage.com">
+      <a class="navbar-item" href="https://github.com/leledeyuan00">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -66,8 +66,8 @@
         </a>
         <div class="navbar-dropdown">
           <!-- TODO: Add links to your other research projects -->
-          <a class="navbar-item" href="https://phaser-project.github.io">
-            PHASER
+          <a class="navbar-item" href="https://leledeyuan00.github.io/cartesian_motion_base/">
+            Cartesian Motion Base
           </a>
         </div>
       </div>
@@ -89,23 +89,25 @@
             for Force-Guided Deformable Object Manipulation
           </h1>
           <div class="is-size-5 publication-authors">
-            <!-- TODO: Replace with actual author names and URLs -->
             <span class="author-block">
-              <a href="#">Author One</a><sup>1*</sup>,</span>
+              <a href="https://github.com/leledeyuan00">Dayuan Chen</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="#">Author Two</a><sup>1,2*</sup>,</span>
+              <a href="https://github.com/KaiTang98">Kai Tang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">Author Three</a><sup>2</sup>
+              <a href="https://github.com/jkk5454">Yukuan Zhang</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.transgp.hk/">Kazuhiro Kosuge</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://srd.mech.tohoku.ac.jp/en/">Yasuhisa Hirata</a><sup>1</sup>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <!-- TODO: Replace with actual affiliations -->
-            <span class="author-block"><sup>1</sup>University A,</span>
-            <span class="author-block"><sup>2</sup>University B</span>
-          </div>
-          <div class="is-size-6 publication-authors">
-            <span class="author-block" style="color: #888;">* Equal contribution</span>
+          <div class="is-size-7 publication-authors">
+            <span class="author-block"><sup>1</sup>Smart Robots Design Lab, Department of Robotics, Tohoku University, Sendai, Miyagi, 980-8579, Japan</span>
+            <span class="author-block"><sup>2</sup>JC STEM Lab of Robotics for Soft Materials, the Department of Electrical and Electronic Engineering, Faculty of Engineering,</span> 
+            <span class="author-block">The University of Hong Kong, Hong Kong SAR, China, and also with the Centre for Transformative Garment Production, Hong Kong SAR, China</span>
           </div>
 
           <!-- ---- Resource Buttons ---- -->
@@ -163,18 +165,15 @@
 <!-- ============================================================ -->
 <!--                    TEASER VIDEO / IMAGE                       -->
 <!-- ============================================================ -->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!--
-        TODO: Replace with your teaser video or image.
-        For video:
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/teaser.mp4" type="video/mp4">
-          </video>
-        For image:
-          <img src="./static/images/teaser.png" alt="PHASER teaser figure" />
-      -->
+
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <iframe src="https://www.youtube.com/embed/-pbfVAZkIuI?si=ML32YRIlRstampF7" title="YouTube video player" 
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </video>
+
       <div class="figure-placeholder">
         Replace with your teaser figure or video → ./static/images/teaser.png
       </div>
@@ -184,7 +183,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- ============================================================ -->
@@ -231,6 +230,17 @@
 <!-- ============================================================ -->
 <section class="section">
   <div class="container is-max-desktop">
+        <!-- Paper Video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2> -->
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/-pbfVAZkIuI?si=ML32YRIlRstampF7" title="YouTube video player" 
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video -->
     <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -238,51 +248,28 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your actual abstract -->
           <p>
-            Imitation learning provides a promising paradigm for acquiring complex manipulation
-            skills from expert demonstrations. However, deploying learned policies for deformable
-            object manipulation remains challenging due to the objects' infinite-dimensional state
-            spaces and the difficulty of recovering from execution errors.
-          </p>
-          <p>
-            We present <span class="dnerf">PHASER</span>
-            (<em>Phase-Aware Self-Recovering Imitation Learning</em>), a hierarchical framework
-            that addresses these challenges through three key innovations:
-            (1)&nbsp;a phase-based task decomposition that explicitly structures the manipulation
-            process into semantically meaningful stages,
-            (2)&nbsp;a force-aware policy conditioned on tactile feedback for robust interaction
-            with deformable objects, and
-            (3)&nbsp;a closed-loop recovery mechanism that detects failures via phase prediction
-            and autonomously re-routes execution to the appropriate recovery behavior.
-          </p>
-          <p>
-            Extensive experiments on [benchmark tasks] demonstrate that
-            <span class="dnerf">PHASER</span> achieves [X]% higher success rates than
-            prior methods while recovering from [Y]% of mid-task failures.
+            This paper presents a phase-guided, force-aware mechatronic framework for the robust manipulation of deformable objects. 
+            Deformable object manipulation is prone to execution <span class="abstract-emph">failures</span> due to state aliasing, occlusion, 
+            and external perturbations—conditions in which <span class="abstract-emph">visually similar states may require fundamentally different actions.</span> 
+            Standard behavior cloning methods, such as Action Chunking with Transformers (ACT), 
+            map observations to actions under a de facto Markovian assumption at inference time, 
+            rendering them <span class="abstract-emph">unable to distinguish</span> such aliased states or <span class="abstract-emph">recover from failures</span> autonomously. 
+            To address this, we propose a <span class="abstract-key">closed-loop hierarchical architecture</span> with three key components. 
+            First, we <span class="abstract-emph">decompose tasks into discrete phases</span> and introduce a <span class="abstract-emph">FiLM-conditioned ACT encoder</span> that modulates 
+            feature extraction based on the current phase, effectively transforming the neural policy into a 
+            controllable finite-state machine that produces <span class="abstract-emph">deterministic, phase-specific behaviors</span> while sharing a common decoder 
+            across phases for data-efficient learning. Second, a <span class="abstract-emph">lightweight multi-modal phase predictor</span> fusing visual, force, 
+            and pose information monitors task progress in real time and autonomously triggers failure-recovery trajectories upon 
+            detecting contact anomalies such as snagging or misalignment. Third, a <span class="abstract-emph">hybrid impedance controller</span> ensures compliant and 
+            safe physical execution. The framework is complemented by a bilateral haptic teleoperation system for collecting force-aware demonstrations. 
+            <span class="abstract-result">Validated on long-horizon reversible tasks—hanging and removing a T-shirt with dual arms—the system improves task success 
+            rates from <span class="abstract-metric">56%</span>  to <span class="abstract-metric">87%</span> (hanging) and <span class="abstract-metric">88%</span> to <span class="abstract-metric">92%</span> (removal) through active error recovery.</span>
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract -->
 
-    <!-- Paper Video -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <!--
-            TODO: Replace with your YouTube video embed URL.
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&amp;showinfo=0"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          -->
-          <div class="video-placeholder-inner">
-            <i class="fas fa-play"></i>
-            Embed your video → YouTube / Bilibili
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper Video -->
-  </div>
 </section>
 
 
@@ -293,9 +280,9 @@
   <div class="container is-max-desktop">
 
     <!-- Method Overview -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
+    <div class="columns is-centered ">
+      <div class="column is-full-width ">
+        <h2 class="title is-3 has-text-centered">Method</h2>
 
         <div class="content has-text-justified">
           <p>
@@ -310,17 +297,12 @@
         </div>
 
         <!-- Method Figure -->
-        <!--
-          TODO: Replace with your method/pipeline figure:
-          <img src="./static/images/method.png"
-               alt="PHASER method overview"
-               class="interpolation-image" />
-        -->
-        <div class="figure-placeholder">
-          Replace with your method figure → ./static/images/method.png
-        </div>
+        <img src="./static/images/Model-full.png"
+              alt="PHASER method overview"
+              class="interpolation-image" />
+       
         <p class="has-text-centered is-size-7" style="margin-top: 0.5rem; color: #888;">
-          <b>Figure 2.</b> Architecture of <span class="dnerf">PHASER</span>.
+          <b>Figure 1.</b> Architecture of <span class="dnerf">PHASER</span>.
           The phase predictor monitors task progress and feeds phase labels to the
           hierarchical policy. Anomalies trigger the recovery module.
         </p>
