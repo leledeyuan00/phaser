@@ -85,8 +85,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            PHASER: Phase-Aware Self-Recovering Imitation Learning
-            for Force-Guided Deformable Object Manipulation
+            Phase-Conditioned Imitation Learning with Autonomous Failure Recovery for Robust Deformable Object Manipulation
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -124,7 +123,7 @@
                 </a>
               </span>
               <!-- arXiv Link -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -132,9 +131,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -142,10 +141,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://github.com/leledeyuan00/lerobot/tree/film_enc"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -248,22 +247,19 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your actual abstract -->
           <p>
-            This paper presents a phase-guided, force-aware mechatronic framework for the robust manipulation of deformable objects. 
-            Deformable object manipulation is prone to execution <span class="abstract-emph">failures</span> due to state aliasing, occlusion, 
-            and external perturbations—conditions in which <span class="abstract-emph">visually similar states may require fundamentally different actions.</span> 
-            Standard behavior cloning methods, such as Action Chunking with Transformers (ACT), 
-            map observations to actions under a de facto Markovian assumption at inference time, 
-            rendering them <span class="abstract-emph">unable to distinguish</span> such aliased states or <span class="abstract-emph">recover from failures</span> autonomously. 
-            To address this, we propose a <span class="abstract-key">closed-loop hierarchical architecture</span> with three key components. 
-            First, we <span class="abstract-emph">decompose tasks into discrete phases</span> and introduce a <span class="abstract-emph">FiLM-conditioned ACT encoder</span> that modulates 
-            feature extraction based on the current phase, effectively transforming the neural policy into a 
-            controllable finite-state machine that produces <span class="abstract-emph">deterministic, phase-specific behaviors</span> while sharing a common decoder 
-            across phases for data-efficient learning. Second, a <span class="abstract-emph">lightweight multi-modal phase predictor</span> fusing visual, force, 
-            and pose information monitors task progress in real time and autonomously triggers failure-recovery trajectories upon 
-            detecting contact anomalies such as snagging or misalignment. Third, a <span class="abstract-emph">hybrid impedance controller</span> ensures compliant and 
-            safe physical execution. The framework is complemented by a bilateral haptic teleoperation system for collecting force-aware demonstrations. 
-            <span class="abstract-result">Validated on long-horizon reversible tasks—hanging and removing a T-shirt with dual arms—the system improves task success 
-            rates from <span class="abstract-metric">56%</span>  to <span class="abstract-metric">87%</span> (hanging) and <span class="abstract-metric">88%</span> to <span class="abstract-metric">92%</span> (removal) through active error recovery.</span>
+            This paper presents a phase-conditioned, force-aware framework for robust deformable object manipulation.
+            Standard imitation learning policies such as Action Chunking with Transformers (ACT) rely on a Markovian assumption at inference,
+            causing <span class="abstract-emph">state aliasing</span> when visually similar observations require <span class="abstract-emph">contradictory actions and preventing autonomous recovery</span> from execution failures.
+            We address this with a <span class="abstract-key">closed-loop hierarchical architecture</span>. 
+            <span class="abstract-emph">A FiLM-conditioned ACT encoder</span> modulates feature extraction based on the current task phase,
+            enabling a single unified policy to produce phase-specific behaviors while sharing action dynamics across phases.
+            <span class="abstract-emph">A multi-modal phase predictor</span> fusing visual, force, and pose feedback estimates the phase in real time, 
+            detecting contact failures that are invisible to vision alone and autonomously triggering recovery trajectories.
+            The system is completed by a <span class="abstract-emph">hybrid impedance controller</span> for compliant execution and a <span class="abstract-emph">haptic teleoperation interface</span> for force-aware data collection.
+            Ablation studies show that FiLM-based modulation significantly outperforms both unconditioned and token-level conditioned baselines, 
+            and <span class="abstract-metric">t-SNE analysis</span> confirms that FiLM induces well-separated, phase-specific feature representations. 
+            Validated on hanging and removing a T-shirt with dual arms, 
+            the closed-loop system improves the hanging success rate from <span class="abstract-metric">56\%</span> to <span class="abstract-metric">87\%</span> through autonomous error recovery.
           </p>
         </div>
       </div>
@@ -299,7 +295,7 @@
         <!-- Method Figure -->
         <img src="./static/images/Model-full.png"
               alt="PHASER method overview"
-              class="interpolation-image" />
+              class="interpolation-image"/>
        
         <p class="has-text-centered is-size-7" style="margin-top: 0.5rem; color: #888;">
           <b>Figure 1.</b> Architecture of <span class="dnerf">PHASER</span>.
