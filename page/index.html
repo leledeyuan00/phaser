@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="PHASER: Phase-Aware Self-Recovering Imitation Learning for Force-Guided Deformable Object Manipulation.">
+        content="Phase-Conditioned Imitation Learning with Autonomous Failure Recovery for Robust Deformable Object Manipulation.">
   <meta name="keywords" content="PHASER, Imitation Learning, Deformable Object Manipulation, Failure Recovery, Force-Aware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PHASER: Phase-Aware Self-Recovering Imitation Learning for Force-Guided Deformable Object Manipulation</title>
+  <title>Phase-Conditioned Imitation Learning with Autonomous Failure Recovery for Robust Deformable Object Manipulation</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3K2VQ28LX"></script>
@@ -333,15 +333,24 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Fast Speed Limitation Test</h2>
 
         <div class="content has-text-justified">
           <p>
             <!-- TODO: Briefly describe your experimental setup -->
-            We evaluate <span class="dnerf">PHASER</span> on a diverse set of deformable
-            object manipulation tasks, comparing against state-of-the-art imitation learning
-            baselines. We assess both nominal task success and recovery ability under
-            injected perturbations.
+            We evaluate our method on a higher speed by selecting 5th action from the output chunk.
+            For taking off task, it reduced the smoothness and actio precision.
+            We attribute this to two factors: 
+            (1) subsampling the action chunk bypasses the temporal ensembler's smoothing mechanism, 
+            producing jerky motion; and (2) faster execution drives the manipulated object into out-of-distribution states not covered by the training data, 
+            causing policy confusion. Addressing this would likely require either collecting demonstrations at varying speeds or incorporating online reinforcement learning to adapt to dynamic conditions.
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: Briefly describe your experimental setup -->
+            No accleration on the following videos.
           </p>
         </div>
 
@@ -352,20 +361,40 @@
               TODO: Replace with your result figure:
               <img src="./static/images/result1.png" alt="Result 1" style="width:100%; border-radius:6px; margin-bottom:0.5rem;" />
             -->
-            <div class="fig-placeholder">Result 1 → ./static/images/result1.png</div>
-            <p><b>(a)</b> Success rates across deformable manipulation tasks.</p>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/UCdhx2Tyv_Y?si=Ll_mSn1ijg9psebN" title="YouTube video player" 
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <p><b>(a)</b> Sucess task on hanging with a 5 times speed up. </p>
           </div>
           <div class="result-card">
-            <div class="fig-placeholder">Result 2 → ./static/images/result2.png</div>
-            <p><b>(b)</b> Recovery success under injected perturbations.</p>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/InvD_-XPAk0?si=9diIJXx5r9HZXDzE" title="YouTube video player" 
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <p><b>(b)</b> Sucess on taking off but slower of the overall execution time than normal speed. </p>
+          </div>
+        </div>
+
+        <!-- Failure Case on Taking off -->
+        <div class="result-grid">
+          <div class="result-card">
+            <!--
+              TODO: Replace with your result figure:
+              <img src="./static/images/result1.png" alt="Result 1" style="width:100%; border-radius:6px; margin-bottom:0.5rem;" />
+            -->
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/I1BpsIsPjHc?si=EvnO9lUuah9NqI3r" title="YouTube video player" 
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <p><b>(a)</b> A failure case caused an un-recovered drop out. </p>
           </div>
           <div class="result-card">
-            <div class="fig-placeholder">Result 3 → ./static/images/result3.png</div>
-            <p><b>(c)</b> Ablation: force-awareness and phase predictor.</p>
-          </div>
-          <div class="result-card">
-            <div class="fig-placeholder">Result 4 → ./static/images/result4.png</div>
-            <p><b>(d)</b> Phase prediction accuracy vs. task success.</p>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/f82Q8a-1IX4?si=FXJB6ht6ggSA7Ih-" title="YouTube video player" 
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <p><b>(b)</b> A failure case caused an unsceen scenario. </p>
           </div>
         </div>
 
@@ -382,14 +411,15 @@
   <div class="container is-max-desktop content bibtex-section">
     <h2 class="title">BibTeX</h2>
     <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+    Comming soon...
     <!-- TODO: Replace with your actual BibTeX entry -->
-    <pre><code>@inproceedings{authorname2026phaser,
+    <!-- <pre><code>@inproceedings{authorname2026phaser,
   author    = {One, Author and Two, Author and Three, Author},
   title     = {PHASER: Phase-Aware Self-Recovering Imitation Learning
                for Force-Guided Deformable Object Manipulation},
   booktitle = {Proceedings of the Conference 2026},
   year      = {2026},
-}</code></pre>
+}</code></pre> -->
   </div>
 </section>
 
@@ -404,7 +434,7 @@
       <a class="icon-link" href="#">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="#" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/leledeyuan00" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
