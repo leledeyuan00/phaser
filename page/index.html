@@ -338,10 +338,10 @@
         <div class="content has-text-justified">
           <p>
             <!-- TODO: Briefly describe your experimental setup -->
-            We evaluate our method on a higher speed by selecting 5th action from the output chunk.
-            For taking off task, it reduced the smoothness and actio precision.
+            We evaluate our method at a higher speed by selecting the 5th action from the output chunk.
+            The taking-off task has been reduced in terms of smoothness and action precision.
             We attribute this to two factors: 
-            (1) subsampling the action chunk bypasses the temporal ensembler's smoothing mechanism, 
+            (1) Subsampling the action chunk bypasses the temporal ensembler's smoothing mechanism, 
             producing jerky motion; and (2) faster execution drives the manipulated object into out-of-distribution states not covered by the training data, 
             causing policy confusion. Addressing this would likely require either collecting demonstrations at varying speeds or incorporating online reinforcement learning to adapt to dynamic conditions.
           </p>
